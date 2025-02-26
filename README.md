@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# ai-voice-assistant
-=======
 # AI Voice Assistant 🗣️🤖
 
 This is an AI-powered voice assistant built using **FastAPI, Dialogflow, MongoDB, and Docker**.  
@@ -26,4 +23,3 @@ It can process user queries, retrieve responses from Dialogflow, and store chat 
 **Demo Video**
 
    
->>>>>>> b59576b (Initial commit: AI Voice Assistant with FastAPI, Dialogflow & MongoDB)
