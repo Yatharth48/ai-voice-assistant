@@ -19,16 +19,16 @@ logger.info(f"🔍 ENV VARIABLES: {os.environ}")
 # Get MongoDB URI from Environment Variable
 MONGO_URI = os.getenv("MONGO_URI")
 if not MONGO_URI:
-    raise ValueError("❌ ERROR: MONGO_URI environment variable is not set!")
+    raise ValueError(" ERROR: MONGO_URI environment variable is not set!")
 
 # Connect to MongoDB Atlas
 try:
     mongo_client = MongoClient(MONGO_URI, tls=True, tlsAllowInvalidCertificates=True)
     db = mongo_client["ai_voice_assistant"]
     chat_history_collection = db["chat_logs"]
-    logger.info("✅ MongoDB Connected Successfully!")
+    logger.info(" MongoDB Connected Successfully!")
 except Exception as e:
-    logger.error(f"❌ MongoDB Connection Failed: {str(e)}")
+    logger.error(f" MongoDB Connection Failed: {str(e)}")
 
 # Initialize FastAPI app
 app = FastAPI()
@@ -39,7 +39,7 @@ if google_credentials_json:
     credentials_info = json.loads(google_credentials_json)
     credentials = service_account.Credentials.from_service_account_info(credentials_info)
 else:
-    raise ValueError("❌ ERROR: Google credentials are not set in environment variables!")
+    raise ValueError(" ERROR: Google credentials are not set in environment variables!")
 
 session_client = dialogflow.SessionsClient(credentials=credentials)
 DIALOGFLOW_PROJECT_ID = "lithe-center-311717"
