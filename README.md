@@ -12,7 +12,7 @@ It can process user queries, retrieve responses from Dialogflow, and store chat 
 ## 🔧 Installation & Usage
 1. **Clone the Repository**  
    ```bash
-   git clone https://github.com/YOUR_GITHUB_USERNAME/ai-voice-assistant.git
+   git clone https://github.com/Yatharth48/ai-voice-assistant.git
    cd ai-voice-assistant
 2. **Run using Docker**
    ~~~bash
